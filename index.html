@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+
+        /* CSS for Navigation Class Selector */
+     .navi{
+            display: flex;
+            padding:auto;
+            background-color: black;
+            height:60px;
+            border-bottom: 2px solid rgb(255, 255, 255);
+        }
+
+        .nav{
+            border:2px solid white;
+            margin: auto;
+            padding:10px;
+            color: white;
+            border-radius: 15px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           
+        }
+
+       .nav a{
+            text-decoration:none;
+            color:white;
+            
+        }
+
+        .nav:hover{
+            background-color: aqua;
+            border:1px dotted rgb(255, 255, 255);
+            outline: auto;
+            outline-offset: 5px;
+            font-size: 18px;
+            
+        
+        }
+
+        .nav a:hover{
+            color:black;
+
+        }
+
+        .lad{
+            border: 5px solid silver;
+            border-radius:50px;
+            width: 60px;
+            height: 30px;
+            position: relative;
+            top:10px;
+            right:10px;
+            background-color: white;
+        }
+
+        .sider{
+            border: 2px solid black;
+            width: 30px;
+            height: 27px;
+            border-radius: 100px;
+            background-color: black;
+            
+        }
+
+        /* .lad:active{
+            
+            background-color: black;
+
+        } */
+        .sider:active{
+            border: 2px solid white;
+            width: 30px;
+            height: 28px;
+            border-radius: 100px;
+            background-color: rgb(0, 0, 0);
+            position: relative;
+            left:27px;
+            
+
+        }
+
+        /* Css for main class selector */
+
+        .main{
+            height: 620px;
+           
+            
+        }
+
+        
+        .text{
+            color: white;
+            font-size: 100px;
+            word-spacing: 5px;  
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 1000px;
+            
+                
+            
+        }
+       
+
+        .text:nth-child(even){
+            animation-name: textanimation;
+            animation-duration:1s;
+            animation-delay: 1s;
+            animation-timing-function:cubic-bezier(0.23, 1, 0.320, 1);
+            /* animation-direction: reverse; */
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes textanimation {
+
+            0%{color:aqua;text-shadow: 2px 2px 60px red,2px 2px 6px rgb(18, 168, 210),2px 2px 6px rgb(255, 0, 217);}
+            50%{color:rgb(255, 219, 17);text-shadow: 2px 2px 60px rgb(46, 212, 4),2px 2px 6px rgb(242, 42, 20),2px 2px 6px rgb(167, 152, 164);}
+            100%{color:rgb(83, 23, 203);text-shadow: 2px 2px 60px rgb(251, 255, 22),2px 2px 6px rgb(250, 253, 63),2px 2px 6px rgb(116, 230, 255);}
+
+            
+        }
+        /* border-radius: 10px;background-color: white;width:700px;
+        border-radius: 50px;background-color: rgb(22, 223, 254);width:700px;
+        border-radius: 40px;background-color: rgb(0, 0, 0);width:700px; */
+
+       .image{
+        text-align: center;
+        border: 2px solid rgba(0, 0, 0,0.0);
+        height: 420px;
+        max-width: min-content;
+        position: relative;
+        bottom: 358px;
+        left:540px;
+        
+        
+       }
+
+       .laptop{
+        /* border: 2px solid white;
+        width: 250px;
+        height:180px;
+        margin: auto;
+        position: relative;
+        bottom: 188px;
+        border-radius: 20px;
+        background-color:silver;
+        text-shadow: 2px 2px 2px red;
+        box-shadow: 1px 5px 10px red,5px 5px 10px aqua,1px 1px 10px rosybrown,1px 1px 10px blue,1px 1px 10px green;
+        animation-name: close;
+         animation-duration: 5s;
+         animation-delay: 2s; 
+         animation-timing-function:ease-in-out; 
+         animation-iteration-count: infinite;
+         animation-direction: reverse;
+         */
+
+         position: relative;
+         width: 300px;
+            height: 200px;
+            perspective: 800px;
+       }
+
+       .screen {
+            position: absolute;
+            bottom: 200px;
+            left:60px;
+            width: 100%;
+            height: 100%;
+            background: rgb(220, 220, 220);
+            border-radius: 10px;
+            transform-origin: bottom;
+            transition: transform 1s ease-in-out;
+            box-shadow:1px 5px 10px red,5px 5px 10px aqua,1px 1px 10px rosybrown,1px 1px 10px blue,1px 1px 10px green  ;
+
+        }
+
+        .laptop:hover .screen {
+            transform: rotateX(90deg);
+        }
+
+       @keyframes close {
+
+        5%{border:0px solid rgba(0, 0, 0,0.0);background-color: rgba(0, 0, 0,0.0);box-shadow: 0px 0px 0px rgba(0, 0, 0,0.0);}
+        50%{border:0px solid rgba(0, 0, 0,0.0);background-color: rgba(0, 0, 0,0.0);box-shadow: 0px 0px 0px rgba(0, 0, 0,0.0);}
+
+       }
+
+       .square{
+          
+          border:2px solid black;
+          width: 15px;
+          height: 12px;
+          border-radius: 3px;
+          box-sizing: border-box;
+          display: inline-block;
+          position: relative;
+          top:70px;
+          /* animation-name: close;
+         animation-duration: 5s;
+         animation-delay: 2s; 
+         animation-timing-function:ease-in-out; 
+         animation-iteration-count: infinite;
+         animation-direction: reverse;
+        */
+       }
+hr{
+    position: relative;
+    top:20px;
+    background-color: linear-gradient(red, yellow, blue);
+    /* border-bottom: px solid white; */
+}
+
+/* .concat{
+    background-color: pink;
+} */
+
+       .about{
+        color:rgb(0, 191, 255)
+       }
+
+       .about h2{
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        /* padding-left:100px; */
+        margin-top:150px;
+        padding-top: 50px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+       }
+
+       .about p{
+        text-align: center;
+        font-size: 25px;
+        padding:30px 300px;
+        color:white;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+       }
+
+       h1{
+        color:rgb(0, 191, 255);
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: bold;
+        text-shadow:1px 5px 10px red,5px 5px 10px aqua,1px 1px 10px rosybrown,1px 1px 10px blue,1px 1px 10px green ;
+
+       }
+       .skills,.additionskills{
+
+        /* display: flex;  */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        left:448px;
+        width: 600px;
+        /* border: 2px solid white; */
+        height: 250px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+       
+    
+    }
+
+    
+
+       .skill{
+        display: inline-block;
+        
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-radius: 30px;
+        /* width:100px; */
+       
+        color: white;
+        font-weight: bold;
+        margin: 5px;
+        padding:12px;
+        height: 10px;
+        line-height: 5px;
+       }
+
+       .skill:hover{
+        outline: auto;
+        border:5px solid white;
+        outline-offset: 5px;
+        font-size:20px;
+       }
+
+       .skill:nth-child(even){
+        background-color: orange;
+        border-color: orange;
+
+       }
+
+       .skill:nth-child(odd){
+        background-color: rgb(0, 191, 255);
+        border-color: rgb(0, 191, 255);
+       }
+
+       .additionskills .skill:nth-child(even){
+        background-color: rgb(229, 127, 255);
+        border-color: rgb(229, 127, 255);;
+
+       }
+
+       .additionskills .skill:nth-child(odd){
+        background-color: rgb(55, 41, 254);
+        border-color: rgb(55, 41, 254);
+       }
+
+       .internships{
+        color:white;
+        /* background-color: pink; */
+       }
+
+       .internships h1{
+        color:rgb(0, 191, 255);
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 50px;
+
+        /* margin-top:200px; */
+        /* padding-top: 50px; */
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+       }
+
+       .internships h2{
+        color:white;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 30px;
+        border-radius: 50px;
+        text-shadow:1px 5px 10px red,5px 5px 10px aqua,1px 1px 10px rosybrown,1px 1px 10px blue,1px 1px 10px green ;
+        /* border-bottom: 2px solid white; */
+    
+       }
+
+       /* ul{
+        animation-name: underh;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+       }
+
+       @keyframes underh {
+
+        10%{border-bottom:2px solid rgba(0, 0, 0, 0);text-shadow:1px 5px 10px red,5px 5px 10px aqua,1px 1px 10px rosybrown,1px 1px 10px blue,1px 1px 10px green ;
+              width: 20px;}
+        
+        
+       } */
+       .internships img{
+        border: 2px solid white;
+        background-color:white;
+        position: relative;    
+        left:543px;
+        border-radius: 50px;
+       }
+
+       .internships img{
+        animation-name: imageanimation;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: reverse;
+       }
+
+       @keyframes imageanimation {
+
+        0%{box-shadow:1px 20px 10px red,-20px 5px 10px aqua,1px 2px 2px rosybrown,10px 1px 10px blue,1px -1px 10px green  ;
+        }
+        50%{ text-shadow:1px 5px 10px rgb(0, 0, 0),5px 5px 10px rgb(13, 255, 0),1px 1px 10px rgb(254, 17, 17),1px 1px 10px rgb(84, 84, 91),1px 1px 10px green  ;
+        }
+        100%{box-shadow:1px 5px 10px rgb(255, 136, 0),-5px 5px 10px rgb(4, 62, 62),1px 1px 2px rosybrown,1px -1px 10px rgb(153, 255, 0),1px -1px 10px rgb(128, 0, 98)  ;
+        }
+        
+       }
+       .internships p{
+        text-align: center;
+        font-size: 25px;
+        padding:30px 300px;
+        color:rgb(255, 255, 255);
+        font-family:monospace;
+        font-weight: bold;
+        animation-name: textanimationp;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        /* animation-direction: reverse; */
+       }
+
+       @keyframes textanimationp {
+        0%{
+            border:0px solid rgba(0, 0, 0, 0);
+            box-shadow:1px 20px 10px red,20px 5px 10px aqua,1px 10px 10px rosybrown,10px -1px 10px blue,1px -1px 10px green  ;
+            ; border-radius: 10px;
+        }
+
+        50%{border:0px solid rgba(0, 0, 0, 0);;text-shadow:1px -5px 10px rgb(0, 0, 0),5px 5px 10px rgb(13, 255, 0),1px -1px 10px rgb(254, 17, 17),1px 1px 10px rgb(84, 84, 91),1px 1px 10px green  ;
+            border-radius: 30px;}
+        100%{box-shadow:1px 5px 10px rgb(255, 136, 0),5px -5px 10px rgb(4, 62, 62),1px 1px 10px rosybrown,1px -1px 10px rgb(153, 255, 0),1px 1px 10px rgb(128, 0, 98)  ;
+            border-radius: 100px;}
+        
+       }
+
+      
+       .project{
+               display: flex;
+            
+       }
+
+       .projects h3{
+        color:pink;
+        font-size: 25px;
+        text-transform: uppercase;
+        word-spacing: 5px;
+        font-family: monospace;
+        padding-top:100px;
+        padding-left:50px;
+       }
+
+       .projects h2{
+        color:white;
+        font-size: 50px;
+        font-weight: bold;
+        word-spacing: 5px;
+        /* font-family: monospace; */
+        padding-left:50px;
+       }
+
+       .projects p{
+        color:white;
+        padding-left:50px;
+        font-size: 20px;
+        width: 810px;
+        font-family: monospace;
+        
+
+       }
+    
+       .projects img{
+        position: relative;
+        top:100px;
+        left: 20px;
+        padding-top: 20px;
+        padding-left:50px;
+        border-radius: 40px;
+        box-shadow:1px 20px 10px red,20px 5px 10px aqua,1px 10px 10px rosybrown,10px -1px 10px blue,1px -1px 10px green  ;
+
+
+
+
+       }
+
+
+       .projectinformation{
+
+        color:white;
+        /* display: inline; */
+        position: relative;
+        bottom: 420px;
+        left:640px;
+        width:800px;
+        height: 100px;
+
+       }
+
+     .technologies{
+
+        display: inline;
+        border: 2px solid white;
+        padding: 8px;
+        margin-left:60px ;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        
+       } 
+
+       .technologies:nth-child(odd){
+        background-color: orange;
+        border:5px solid orange;
+        font-size: 15px;
+        font-family: monospace;
+    }
+
+     .technologies:nth-child(even){
+        background-color: rgb(255, 4, 247);
+        border:5px solid rgb(255, 4, 247);
+        font-size: 15px;
+        font-family: monospace;
+    } 
+
+    .technologies:hover{
+        outline: auto;
+        border:5px solid white;
+        outline-offset: 5px;
+        font-size:20px;
+       }
+       
+    .projectinformation p{
+        padding-top: 20px;
+        /* width: 30opx; */
+    
+    }
+
+
+    label{
+        
+       padding-left:2px;
+       max-width:100%;
+       font-size: 18px;
+    }
+
+    input{
+        color:aqua;
+    }
+
+
+    .project1information{
+
+        padding:20px;
+        
+        
+    }
+
+    .project1information p{
+        padding-top: 10px;
+    
+    }
+
+
+    .project1image img{
+
+
+color:white;
+
+/* display: inline; */
+
+
+
+}
+
+
+
+.qualifications h1{
+
+    color:white;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+
+}
+
+
+
+
+.qualifications{
+    padding:20px 0px;
+}
+
+.resume{
+
+    margin: 80px 200px;
+    padding-left:456px;
+}
+.resume a{
+    text-decoration: none;
+    color:White;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    border:2px solid white;
+    border-radius: 30px;
+    padding:5px 10px;
+    
+}
+
+.resume a:hover{
+    background-color:white;
+    border:2px solid white;
+    color:black;
+}
+.container {
+            width: 300px;
+            position: relative;
+            text-align: center;
+            background: white;
+            padding: 20px 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* height: 100px; */
+            cursor: pointer;
+            left:150px;
+            display: flex;
+            display: inline-block
+            
+
+
+        }
+        .container{
+            color:black;
+            font-size: 20px;
+            text-align: center;
+            font-family: monospace;
+            font-weight: bold;
+            background-color: rgb(109, 255, 65);
+           
+
+        }
+
+        .info {
+            max-height: 1px;
+            overflow: hidden;
+            transition: max-height 1s ease-in-out;
+            color: #000000;
+            margin-top: 1px;
+        }
+
+        .info p{
+            text-align: center;
+            padding-left: 2px;
+            width: 300px;
+            
+        }
+
+        .container:hover .info {
+            max-height: 300px; 
+        
+
+        }
+
+        .container:hover{
+            box-shadow:1px 10px 10px red,10px 5px 10px rgb(247, 248, 248),1px 5px 10px rosybrown,10px -1px 10px blue,1px -1px 10px green  ;
+
+        }
+        
+
+       /* CSS for Contact ME */
+       ul li{
+        list-style-type:none;
+        font-family: cambria;
+        font-size: 20px;
+        font-weight: 5vw;
+        font-weight: 600;
+       }
+       table{
+       padding-top: 20px;
+       border:2px solid;
+       border-radius: 50px;
+       border-color:aqua rgb(250, 255, 98) orange rgb(139, 44, 255);
+       margin-top: 100px;
+              
+       }
+       .contact{
+        font-size: 90px;
+        background:linear-gradient(90deg,#00dbde,#fc00ff);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        padding-bottom: 280px;
+        padding-right: 100px;
+       }
+       .info{
+        position: relative;
+        padding-right: 50px;
+        padding-bottom: 200px;
+       }
+       textarea{
+        font-size: 20px;
+        color: black;
+        padding-bottom: 160px;
+        padding-right:200px;
+        border-radius: 10px;
+       }
+       b a:hover{
+          color:rgb(32, 204, 223);
+         
+        }
+        html{
+           scroll-behavior: smooth;
+        }
+
+        .social-icons {
+    display: flex;
+    gap: 20px;
+}
+.footer{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.social-icons{
+
+    margin-left:300px;
+}
+.icon {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2rem;
+    transition: color 0.3s;
+    
+}
+
+.icon.linkedin:hover {
+    color: #0077b5;
+}
+
+.icon.github:hover {
+    color: #3e3e3e;
+}
+body{
+    scroll-behavior: smooth;
+}
+       </style>
+</head>
+<body bgcolor="black">
+    
+    <div class="navi">
+        <div class="nav"><a href="#abo">I am Bhavani Shankar</a></div>
+        <div class="nav"><a href="#intern">Internship's</a></div>
+        <div class="nav"><a href="#pro">Projects</a></div>
+        <div class="nav"><a href="#qua">Qualifications</a></div>
+        <div class="nav"><a href="#con">Contact Me</a></div>
+        <div class="lad">
+            <div class="sider"></div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="text">I am Bhavani Shankar</div>
+        <div class="text">Web Developer</div>
+        <div class="text">Problem Solver</div>
+        <div class="text">Tech Lover</div>
+        <div class="text">Win</div>
+        <div class="image"><img src="Main image.png" alt="Image">
+            <div class="laptop">
+                <div class="screen">
+                <div class="square"></div>
+                <div class="square"></div><br>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+            </div>
+        </div>
+             
+    </div>  
+<hr>
+<div class="concat" id="abo">
+    <div class="about">
+        <h2>ABOUT ME</h2>
+        <p>Detail-oriented Computer Science graduate with a solid foundation in Oracle SQL, data management, and web 
+            development. Looking for an entry - level software development role to leverage skills in database management, 
+            software design, and problem - solving in a collaborative, fast-paced environment.</p>
+    </div>
+
+    <h1>Skills</h1>
+
+    <div class="skills">
+        
+        
+        <div class="skill">C Programming</div>
+        <div class="skill">Python</div>
+        <div class="skill">Java</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Array</div>
+        <div class="skill">Linked List</div>
+        <div class="skill">Stack</div>
+        <div class="skill">Queues</div>
+        <div class="skill">Problem Solving</div>
+        <div class="skill">Web Deginer</div>
+        <div class="skill">Vs code</div>
+        <div class="skill">Google Colab</div>
+        <div class="skill">Type speed</div>
+        <div class="skill">Quick Leaner</div>
+        <div class="skill">Oracle SQL</div>
+        <div class="skill">Multitasking</div>
+        <div class="skill">TIme Management</div>
+        <div class="skill">Sorting</div>
+        <div class="skill">Searching</div>
+        
+    </div>
+<br>
+    <div class="additionskills">
+        <h1>Hobbies</h1>
+        <div class="skill">Reading Book's</div>
+        <div class="skill">Playing Games</div>
+        <div class="skill">Listing Music</div>
+        <div class="skill">Watching Movies</div>
+        <div class="skill">Walking</div>
+    </div>
+</div>
+    <hr>
+    <br><br>
+
+    <div class="internships" id="intern">
+        <div class="internship1">
+            <h1>Internship's</h1>
+            <h2><u>Nalsoft</u></h2>
+            <a href="https://nalsoft.net/" alt="Nalsot Company" target="new"><img src="Nalsoft Internship.jpg" width="400px" height="500px"></img></a> 
+            <p> Participated in a one-month internship where I gained hands - on experience with database management, SQL query 
+                development, and optimization. 
+                Assisted in analyzing and optimizing existing database queries to improve performance and efficiency. 
+                Collaborated with the team to understand and implement best practices in SQL development and database design. 
+               
+            </p>
+            
+        </div>
+    </div>
+
+    
+
+<hr>
+<div class="projects" id="pro">
+        <h3>What I've Built</h3>
+        <h2>Emotion-Detection-Using-Facial-Expression-And-Speech-Recognition</h2>
+        <p> Developed a model to predict emotions based on speech patterns and facial expressions using deep learning, enhancing 
+            applications in human-computer interaction and business analysis. </p>
+
+        <div class="projectimage">
+            <img src="projectgif.gif"></img>
+
+        </div>
+
+        <div class="projectinformation">
+            <h2>Overview </h2>
+            <div class="technologies">Python</div>
+            <div class="technologies">Deep Learning</div>
+            <div class="technologies">CNN</div>
+
+            <p> Over the recent years much advancement is made in terms of artificial intelligence, machine 
+                learning, human-machine interaction etc. Voice interaction with the machine or giving 
+                command to it to perform a specific task is increasingly popular.</p>
+            <p>
+            <input type="checkbox" id="checkbox1" checked>
+            <label for="checkbox1"> Many consumer electronics are 
+                integrated with SIRI, Alexa, Cortana, Google assist etc.  But machines have limitation that they 
+                cannot interact with a person like a human conversational partner.</label><br><br>
+
+            <input type="checkbox" id="checkbox3" checked>
+            <label for="checkbox2">n this project we tried to identify four basic emotions: anger, sadness, 
+                neutral, happiness from speech. Here we used audio file of short Manipuri speech taken from 
+                movies as training and testing dataset.</label><br><br>
+
+            <input type="checkbox" id="checkbox2" checked>
+            <label for="checkbox2">• Source Code: https://github.com/Bhavanishankarch/Emotion-Detection-Using-Facial-Expression-And-Speech-Recognition
+
+            </label><br>
+        </p>
+        </div>
+        <div class="projects">
+            <h3>Web development</h3>
+            <h2>Student Management System</h2>
+            <p>Built a Student Management System using HTML, CSS, and PHP to simplify student data management for 
+                educational institutions, including enrollment, grading, and reporting functionalities.  </p>
+    
+                <div class="project1information">
+                    <!-- <h2>Overview </h2> -->
+                    <div class="technologies">HTML</div>
+                    <div class="technologies">CSS</div>
+        
+                    <p> Over the recent years much advancement is made in terms of artificial intelligence, machine 
+                        learning, human-machine interaction etc. Voice interaction with the machine or giving 
+                        command to it to perform a specific task is increasingly popular.</p>
+        <p>
+                    <input type="checkbox" id="checkbox1" checked>
+                    <label for="checkbox1"> Many consumer electronics are 
+                        integrated with SIRI, Alexa, Cortana, Google assist etc.  But machines have limitation that they 
+                        cannot interact with a person like a human conversational partner.</label><br><br>
+        
+                    <input type="checkbox" id="checkbox3" checked>
+                    <label for="checkbox2">In this project we tried to identify four basic emotions: anger, sadness, 
+                        neutral, happiness from speech. Here we used audio file of short Manipuri speech taken from 
+                        movies as training and testing dataset.</label><br><br>
+        
+                    <input type="checkbox" id="checkbox2" checked>
+                    <label for="checkbox2">• Source Code: https://github.com/Bhavanishankarch/Student-Management-System 
+        
+                    </label><br>
+                </p>
+                </div>
+
+                <div class="project1image">
+                    <div class="projectimage">
+                        <!-- <img src="Project1.gif"></img> -->
+                </div>
+            <!-- <div class="projectimage">
+                <img src="Project1.png"></img>
+    
+            </div> -->
+    
+           </div>
+    
+        
+
+    </div>
+
+<hr>
+
+    <div class="qualifications" id="qua">
+        <h1>
+            Qualifications <br>
+        </h1>
+     
+        
+        <div class="container">
+            High School
+            <div class="info">
+                <p>School Name: Chimakurthy High School</p>
+                <p>Roll No:172337701</p>
+                <p>Percentage : 85.5%</p>
+                <p>Pass Out Year:2017 -2018</p>
+                <p>Address: Vidhya Nagar, Chimakurthy</p>
+                <p>Pincode: 523226</p>
+                <p>Website: https://www.joonsquare.com/schools/chimakurthy-public-school-prakasam</p>
+            </div>
+        </div>
+
+
+        <div class="container">
+            Intermediate
+            <div class="info">
+                <p>College Name: M.S.R Junior College</p>
+                <p>Roll No:20656787790</p>
+                <p>Course: M.P.C</p>
+                <p>Percentage: 82.7%</p>
+                <p>Pass Out Year: 2018 - 2020</p>
+                <p>Address: Reddy Nagar, Chimakurthy</p>
+                <p>Pincode: 523226</p>
+                <p>Website: https://schools.org.in/prakasam/28182901240/m-s-r-junior-college-chimakurthy.html</p>
+            </div>
+        </div>
+
+        <div class="container">
+            Graduation
+            <div class="info">
+                <p>College Name: Rise Krishna Sai Prakasam Group of institutions</p>
+                <p>Roll No: 208A1A4430</p>
+                <p>Program: B.TECH</p>
+                <p>Course: CSE[Data Science]</p>
+                <p>C.G.P.A: 71%</p>
+                <p>Pass Out Year: 2020 - 2024</p>
+                <p>Location: Valluru, Ongole</p>
+                <p>Pincode: 523272</p>
+                <p>Website: https://www.risekrishnasaiprakasam.edu.in</p>
+            </div>
+        </div>
+
+        <div class="resume" style="color:white;">
+            <a href="Bhavani shankar resume..pdf" download="Bhavani Shankar Resume">Download Resume</a>
+        </div>
+    </div>
+
+    <hr>
+    <div class="table" id="con">
+        <h1 style="margin-top:100px;">Contact Me</h1>
+    <table border="0"align="center" style="margin-top:30px;">
+        <tr>
+            <td>
+                <ul>
+                    <li class="Contact">About</li>
+                </ul>
+            </td>
+        
+            <td>
+                <ul class="info" style="color:white">
+                    <li>Name :Ch.Bhavani Shankar</li>
+                    <li>Contact Number :  +91 7995595161</li>
+                    <li>Gmail : bhavanishankar1011@gmail.com</li>
+                    <li>Location : Sri Venkateswara Nagar, Chimakurthy</li>
+                    <li>Pincode: 523226</li>
+                    <li>Country : India</li>
+                </ul>
+            
+            </td>
+        
+            <td>
+                <ul>
+                    <li>Write your <font style="color:red">Problem!</font></li><br>
+                    <li><textarea rows="6" cols="20" placeholder="Write text here..."></textarea></li>  
+                    <li><button type="submit" style="color:white;
+                    margin:10px 200px;background-color: black;border-color: aqua rgb(250, 255, 98) orange rgb(139, 44, 255);
+                    border-radius: 20px;padding:6px 15px;" >Submit</button></li>         
+                       
+                </ul>
+            </td>
+        </tr>
+        
+            
+           
+           
+         
+        </table>
+    </div>
+
+<hr><br>
+
+<footer style="color:white;padding-left:400px;font-family:Georgia, 'Times New Roman', Times, serif ;font-weight: bold;">
+    <p>&copy; 2025 I am Bhavani Shankar. All Rights Reserved.</p>
+
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/bhavanishankarchanda/" target="_blank" class="icon linkedin">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Bhavanishankarch/" target="_blank" class="icon github">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+</footer>
+
+
+</body>
+</html>
